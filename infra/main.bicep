@@ -22,34 +22,34 @@ param openAILocation string
 param openAISku string = 'S0'
 param openAIApiVersion string = '2023-12-01-preview'
 
-param chatGptDeploymentCapacity int = 120
-param chatGptDeploymentName string = 'chat-gpt-35-turbo'
-param chatGptModelName string = 'gpt-35-turbo'
-param chatGptModelVersion string = '1106'
+param chatGptDeploymentCapacity int = 20
+param chatGptDeploymentName string = 'chat-gpt-4'
+param chatGptModelName string = 'gpt-4'
+param chatGptModelVersion string = '0613'
 param embeddingDeploymentName string = 'embedding'
-param embeddingDeploymentCapacity int = 120
+param embeddingDeploymentCapacity int = 50
 param embeddingModelName string = 'text-embedding-ada-002'
 
 // DALL-E v3 only supported in Sweden Central for now
-@description('Location for the OpenAI DALL-E 3 instance resource group')
-@allowed(['swedencentral'])
-param dalleLocation string
+//@description('Location for the OpenAI DALL-E 3 instance resource group')
+//@allowed(['swedencentral'])
+//param dalleLocation string
 
-param dalleDeploymentCapacity int = 1
-param dalleDeploymentName string = 'dall-e-3'
-param dalleModelName string = 'dall-e-3'
-param dalleApiVersion string = '2023-12-01-preview'
+//param dalleDeploymentCapacity int = 1
+//param dalleDeploymentName string = 'dall-e-3'
+//param dalleModelName string = 'dall-e-3'
+//param dalleApiVersion string = '2023-12-01-preview'
 
 // DALL-E v3 only supported in Sweden Central for now
-@description('Location for the GPT vision instance resource')
-@allowed(['swedencentral','westus',])
-param gptvisionLocation string
+//@description('Location for the GPT vision instance resource')
+//@allowed(['swedencentral','westus',])
+//param gptvisionLocation string
 
-param gptvisionDeploymentCapacity int = 1
-param gptvisionDeploymentName string = 'gpt-4-vision'
-param gptvisionModelName string = 'gpt-4'
-param gptvisionApiVersion string = '2023-12-01-preview'
-param gptvisionModelVersion string = 'vision-preview'
+//param gptvisionDeploymentCapacity int = 1
+//param gptvisionDeploymentName string = 'gpt-4-vision'
+//param gptvisionModelName string = 'gpt-4'
+//param gptvisionApiVersion string = '2023-12-01-preview'
+//param gptvisionModelVersion string = 'vision-preview'
 
 param formRecognizerSkuName string = 'S0'
 param searchServiceIndexName string = 'azure-chat'
@@ -88,17 +88,17 @@ module resources 'resources.bicep' = {
     embeddingDeploymentName: embeddingDeploymentName
     embeddingDeploymentCapacity: embeddingDeploymentCapacity
     embeddingModelName: embeddingModelName
-    dalleLocation: dalleLocation
-    dalleDeploymentCapacity: dalleDeploymentCapacity
-    dalleDeploymentName: dalleDeploymentName
-    dalleModelName: dalleModelName
-    dalleApiVersion: dalleApiVersion
-    gptvisionLocation: gptvisionLocation
-    gptvisionApiVersion: gptvisionApiVersion
-    gptvisionDeploymentCapacity: gptvisionDeploymentCapacity
-    gptvisionDeploymentName: gptvisionDeploymentName
-    gptvisionModelName: gptvisionModelName
-    gptvisionModelVersion: gptvisionModelVersion
+    //dalleLocation: dalleLocation
+    //dalleDeploymentCapacity: dalleDeploymentCapacity
+    //dalleDeploymentName: dalleDeploymentName
+    //dalleModelName: dalleModelName
+    //dalleApiVersion: dalleApiVersion
+    //gptvisionLocation: gptvisionLocation
+    //gptvisionApiVersion: gptvisionApiVersion
+    //gptvisionDeploymentCapacity: gptvisionDeploymentCapacity
+    //gptvisionDeploymentName: gptvisionDeploymentName
+    //gptvisionModelName: gptvisionModelName
+    //gptvisionModelVersion: gptvisionModelVersion
     formRecognizerSkuName: formRecognizerSkuName
     searchServiceIndexName: searchServiceIndexName
     searchServiceSkuName: searchServiceSkuName
